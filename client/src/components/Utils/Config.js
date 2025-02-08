@@ -1,7 +1,7 @@
 let URL = '';
 
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    URL = 'http://localhost:5000';
+    URL = 'https://chesschamp-backend.onrender.com';
 } else {
     URL = '';
 }
