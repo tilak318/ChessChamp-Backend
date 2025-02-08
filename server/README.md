@@ -130,9 +130,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Harshil Tagadiya - [@Harshil Tagadiya](https://www.linkedin.com/in/harshil-tagadiya-442518190/) - harshiltagadiya@gmail.com
 
-Project Link: [https://github.com/harshil-270/ChatApp](https://github.com/harshil-270/ChatApp)
 
 
 
