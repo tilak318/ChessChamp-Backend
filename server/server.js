@@ -11,7 +11,7 @@ const server = http.createServer(app);
 
 const io = socketio(server, {
     cors: {
-        origin: 'https://client-az3nnrb2a-tilak-viradiyias-projects.vercel.app/',
+        origin: 'http://localhost:3000',
         credentials: true,
     },
 });
