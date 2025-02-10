@@ -4,7 +4,6 @@ import axios from 'axios';
 import Header from './components/Header';
 import LandingPage from './components/LandingPage';
 import Login from './components/Auth/Login';
-import EmailConfirmation from './components/Auth/EmailConfirmation';
 import Register from './components/Auth/Register';
 import NewPassword from './components/Auth/NewPassword';
 import ResetPassword from './components/Auth/ResetPassword';
@@ -68,8 +67,6 @@ function App() {
                     <Switch>
                         <Route component={LandingPage} exact path='/' />
                         <Route component={Login} exact path='/login' />
-                        <Route component={EmailConfirmation} exact path='/confirmation/:token' />
-                        {/* the change */}
                         <Route component={Register} exact path='/register' />
                         <Route component={ResetPassword} exact path='/resetPassword' />
                         <Route component={NewPassword} exact path='/reset/:resetToken' />
