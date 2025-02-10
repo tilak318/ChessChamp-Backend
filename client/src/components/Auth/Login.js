@@ -17,15 +17,19 @@ function Login(props) {
     const User = useContext(UserContext);
 
     useEffect(() => {
-
+        console.log("Current URL:", window.location.href);
+        console.log("Search Params:", props.location.search);
+    
         if (props.location.state && props.location.state.message) {
             setError(props.location.state.message);
         }
-        // when user confirms email address. they are redirected to login page with params indicating that user has confirmed email address.
+    
         if (new URLSearchParams(props.location.search).get('EmailConfirmedRedirect') === 'true') {
+            console.log("Email confirmation detected"); // DEBUGGING
             setMessage('Your Email address is confirmed successfully. Now login to continue');
         }
     }, []);
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
