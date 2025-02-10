@@ -11,7 +11,7 @@ const server = http.createServer(app);
 
 const io = socketio(server, {
     cors: {
-        origin: 'https://chesschamp.onrender.com',
+        origin: 'https://chesschamp.onrender.com/',
         credentials: true,
     },
 });
@@ -34,20 +34,7 @@ io.on('connection', (socket) => {
 });
 
 app.use(express.json());
-
-// 🛠 Add Logging Middleware to Debug Incoming Requests
-app.use((req, res, next) => {
-    console.log(`📩 Incoming Request: ${req.method} ${req.url}`);
-    console.log("🛠 Request Body:", req.body); // Logs request body (if applicable)
-    next();
-});
-
-app.use(cors({
-    origin: ['https://chesschamp.onrender.com', 'http://localhost:3000'],
-    credentials: true
-}));
-
-
+app.use(cors());
 
 // Routes
 const gameRouter = require('./routes/gameRouter');
@@ -56,12 +43,12 @@ app.use('/g', gameRouter);
 app.use('/u', userRouter);
 
 // Serve static assets in production
-// if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
-// }
+}
 
 // ✅ MongoDB Connection with Proper Error Handling
 mongoose.connect(process.env.MONGO_URI, {
