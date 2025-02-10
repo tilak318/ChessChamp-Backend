@@ -17,7 +17,7 @@ function Login(props) {
     const User = useContext(UserContext);
 
     useEffect(() => {
-        // if it is redirected from different component then it might have also included some error message.
+
         if (props.location.state && props.location.state.message) {
             setError(props.location.state.message);
         }
