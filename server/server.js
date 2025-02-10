@@ -11,7 +11,7 @@ const server = http.createServer(app);
 
 const io = socketio(server, {
     cors: {
-        origin: 'https://chesschamp.onrender.com/',
+        origin: 'https://chesschamp.onrender.com',
         credentials: true,
     },
 });
@@ -34,7 +34,11 @@ io.on('connection', (socket) => {
 });
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://chesschamp.onrender.com',
+    credentials: true,
+}));
+
 
 // Routes
 const gameRouter = require('./routes/gameRouter');
