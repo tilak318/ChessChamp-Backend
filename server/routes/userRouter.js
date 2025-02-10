@@ -64,7 +64,9 @@ Router.post('/register', async (req, res) => {
             if (err) {
                 console.log(err);
             }
-            const url = `${SERVER_URL}/u/confirmation/${emailToken}`;
+            // const url = `${SERVER_URL}/u/confirmation/${emailToken}`;
+            const url = `${CLIENT_URL}/confirmation/${emailToken}`;
+
             transporter
                 .sendMail({
                     to: user.email,
