@@ -11,7 +11,7 @@ const server = http.createServer(app);
 
 const io = socketio(server, {
     cors: {
-        origin: 'https://chess-client-wavo.onrender.com',
+        origin: 'https://chesschamp.onrender.com',
         credentials: true,
     },
 });
