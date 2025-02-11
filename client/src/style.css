@@ -1,402 +1,307 @@
-
-
-
-/* landing page */
-/* Reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
-    color: #ffffff;
-  }
-  
-  /* Landing page container */
-  #landing-page-container {
-    min-height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  #landing-page-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85));
-    z-index: 1;
-  }
-  
-  /* Landing page title section */
-  #landing-page-title {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 2rem;
-    font-size: 4rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1s ease-out;
-  }
-  
-  /* Cursor animation */
-  #cursor {
-    display: inline-block;
-    margin-left: 5px;
-    animation: blink 0.7s infinite;
-  }
-  
-  /* Buttons */
-  .btn {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .btn-light {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  .btn-light:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-  }
-  
-  .btn-success {
-    background-color: #4CAF50;
-    color: #ffffff;
-  }
-  
-  .btn-success:hover {
-    background-color: #45a049;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes blink {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    #landing-page-title {
-      font-size: 2.5rem;
-      padding: 1rem;
-    }
-  
-    .btn {
-      padding: 10px 20px;
-      font-size: 16px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    #landing-page-title {
-      font-size: 2rem;
-    }
-  
-    .btn {
-      padding: 8px 16px;
-      font-size: 14px;
-    }
-  }
+  margin: 0;
+  padding: 0;
+}
 
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
 
+#root {
+  height: 100%;
+}
+#app-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#GameContainer {
+  border-bottom: 1px solid black;
+}
 
+/* header stylings */
+.title {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+.navbar-item-div {
+  padding: 0 10px;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.navbar-item-div:hover {
+  background-color: #51b7ff;
+}
+.navbar-register-button {
+  margin: 10px;
+}
 
-  /* home page */
+/* Login and register form styling */
+.login-form,
+.register-form {
+  margin: 20px auto;
+  padding: 10px;
+}
 
-  :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --text-color: #f8fafc;
-    --background-overlay: rgba(0, 0, 0, 0.7);
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    color: var(--text-color);
-  }
-  
-  .homepage {
-    min-height: 100vh;
-    position: relative;
-    background: url('https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80') center/cover no-repeat;
-  }
-  
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--background-overlay);
-    z-index: 1;
-  }
-  
-  .main-nav {
-    position: relative;
-    z-index: 2;
-    padding: 2rem 4rem;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: var(--text-color);
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-  
-  .main-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 100px);
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  h1 {
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    font-weight: 800;
-    margin-bottom: clamp(0.5rem, 2vw, 1rem);
-    background: linear-gradient(to right, #60a5fa, #3b82f6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .subtitle {
-    font-size: clamp(1rem, 4vw, 1.5rem);
-    margin-bottom: clamp(2rem, 6vw, 4rem);
-    color: #e2e8f0;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .buttons-container {
-    display: flex;
-    align-items: center;
-    gap: clamp(1rem, 4vw, 2rem);
-    width: 100%;
-    max-width: 800px;
-    padding: 0 1rem;
-  }
-  
-  .play-button {
-    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
-    font-size: clamp(1rem, 3vw, 1.25rem);
-    font-weight: 600;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    flex: 1;
-    max-width: 300px;
-  }
-  
-  .play-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      120deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
-    transition: 0.5s;
-  }
-  
-  .play-button:hover::before {
-    left: 100%;
-  }
-  
-  .play-button.primary {
-    background: var(--primary-color);
-    color: white;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-  }
-  
-  .play-button.primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
-  }
-  
-  .play-button.secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
-  }
-  
-  .play-button.secondary:hover {
-    background: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
-  }
-  
-  .divider {
-    display: flex;
-    align-items: center;
-    color: #94a3b8;
-    font-size: clamp(0.875rem, 2vw, 1.125rem);
-    flex: 0 0 auto;
-  }
-  
-  .divider::before,
-  .divider::after {
-    content: '';
-    height: 1px;
-    background-color: #475569;
-    width: clamp(1rem, 3vw, 2rem);
-    margin: 0 clamp(0.5rem, 2vw, 1rem);
-  }
-  
-  /* Large screens (1200px and up) */
-  @media (min-width: 1200px) {
-    .main-nav {
-      padding: 2.5rem 6rem;
-    }
-  
-    .logo {
-      font-size: 1.75rem;
-    }
-  
-    .buttons-container {
-      gap: 3rem;
-    }
-  }
-  
-  /* Medium screens (768px to 1199px) */
-  @media (max-width: 1199px) {
-    .main-nav {
-      padding: 2rem 4rem;
-    }
-  }
-  
-  /* Small screens (576px to 767px) */
-  @media (max-width: 767px) {
-    .main-nav {
-      padding: 1.5rem 2rem;
-    }
-  
-    .buttons-container {
-      flex-direction: column;
-      padding: 0 2rem;
-    }
-  
-    .play-button {
-      width: 100%;
-      max-width: 100%;
-    }
-  
-    .divider {
-      margin: 0.75rem 0;
-      width: 100%;
-      justify-content: center;
-    }
-  }
-  
-  /* Extra small screens (575px and below) */
-  @media (max-width: 575px) {
-    .main-nav {
-      padding: 1rem;
-    }
-  
-    .logo {
-      font-size: 1.25rem;
-    }
-  
-    .buttons-container {
-      padding: 0 1rem;
-    }
-  }
-  
-  /* Handle viewport height on mobile devices */
-  @media (max-height: 600px) and (orientation: landscape) {
-    .main-content {
-      min-height: calc(100vh - 60px);
-      padding: 1rem;
-    }
-  
-    h1 {
-      margin-bottom: 0.5rem;
-    }
-  
-    .subtitle {
-      margin-bottom: 1.5rem;
-    }
-  }
-  
-  /* Ensure content is readable on ultra-wide screens */
-  @media (min-width: 2000px) {
-    .main-content {
-      max-width: 1800px;
-      margin: 0 auto;
-    }
-  }
+.LoginButton,
+.RegisterButton {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: flex;
+}
 
+.LoginSpinner,
+.RegisterSpinner {
+  margin: 3px;
+}
 
-  
+.Spinner {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+/* Landing page styling */
+#landing-page-container {
+  height: 100%;
+}
+
+#landing-page-title {
+  position: absolute;
+  color: white;
+  width: 100%;
+  text-align: center;
+  top: 30%;
+  font-size: 80px;
+  font-weight: bold;
+  text-shadow: 10px 10px 10px #000, 5px 5px 5px #000, 5px 5px 5px #000;
+}
+
+#cursor {
+  opacity: 0;
+}
+
+/* Home page styling */
+#home-page-container {
+  display: flex;
+}
+
+#home-left-side {
+  width: 50%;
+  display: flex;
+}
+#home-left-button {
+  align-self: center;
+  margin: 0 auto;
+}
+#vertical-line {
+  width: 5px;
+  height: calc(100vh - 72px);
+  opacity: 0.7;
+  background-color: rgb(114, 246, 253);
+  box-shadow: 0 0 20px rgb(0, 255, 195), 0 0 10px rgb(94, 255, 0);
+}
+#home-right-side {
+  width: 50%;
+  display: flex;
+}
+#home-right-button {
+  align-self: center;
+  margin: 0 auto;
+}
+
+/* .play-game-button {
+  box-shadow: 0 0 30px green;
+  background-color: lightgreen;
+  color: purple;
+}
+.play-game-button:hover {
+  box-shadow: 0 0 35px rgb(7, 206, 7);
+  background-color: rgb(106, 243, 106);
+  color: purple;
+} */
+
+#landing-page-container {
+  position: relative;
+}
+
+/* Leaderboard styling */
+#leaderboard-container {
+  width: 1000px;
+  margin: 25px auto;
+}
+
+/* In game styling */
+#GameContainer {
+  width: 100%;
+  height: 100%;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #f4ffeb;
+}
+
+/* In game left sidebar styling */
+#left-sidebar-wrapper {
+  width: 400px;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  background-color: #383e40;
+}
+
+#game-link-container {
+  border-top: 1px dashed white;
+  border-bottom: 1px dashed white;
+  padding-top: 10px;
+}
+
+#in-check-text {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+  font-size: 1.1rem;
+}
+#win-status {
+  font-weight: bold;
+  color: green;
+}
+#lose-status {
+  font-weight: bold;
+  color: red;
+}
+
+#left-sidebar-wrapper > table {
+  margin-bottom: 0;
+}
+#game-link-container > h6 {
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+#game-link {
+  resize: none;
+  background-color: white;
+}
+#copy-button {
+  margin: 10px auto;
+  display: block;
+  font-weight: bold;
+}
+
+/* In-Game Right siderbar styling */
+#right-sidebar-wrapper {
+  width: 450px;
+  height: 100%;
+  /* height: calc(100vh - 75px); */
+  background: #000;
+  background-color: #383e40;
+}
+#moves-table-container {
+  height: calc(100vh - 75px);
+  overflow-y: scroll;
+}
+#moves-header {
+  text-align: center;
+}
+
+.move-color-indicator-white {
+  background-color: white;
+  width: 50px;
+}
+.move-color-indicator-black {
+  background-color: black;
+  width: 50px;
+}
+
+.move-text {
+  text-align: center;
+}
+
+#chessboard-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #434f49;
+}
+#chessboard {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#player-information-opponent {
+  height: 50px;
+  color: white;
+  /* background-color: #457b9d; */
+  align-self: center;
+  font-weight: bold;
+}
+
+#player-information-you {
+  height: 50px;
+  color: white;
+  /* background-color: #457b9d   ; */
+  align-self: center;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Profile tab styling */
+
+.profile-active-tab {
+  background-color: #007bff !important;
+  color: white !important;
+}
+
+.profile-container {
+  width: 1000px;
+  /* flex: 1 1 auto; */
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+/* View Profile styling */
+#profile-sub-container {
+  display: flex;
+  /* height: 100%; */
+  border: 1px solid #007bff;
+}
+
+#profile-user-detail {
+  padding: 25px;
+}
+
+#profile-picture-container {
+  width: 250px;
+}
+
+#profile-picture-container img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#profile-username-rating {
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#user-graph-container {
+  width: 100%;
+  /* border: 2px solid orange; */
+}
+
+/* match-history styling */
+#match-history-container table {
+  margin-bottom: 0;
+  text-align: center;
+}
