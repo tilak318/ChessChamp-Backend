@@ -22,19 +22,28 @@ body {
 }
 
 /* header stylings */
-.title {
+.navbar-brand.title {
   font-size: 1.9rem;
   font-weight: bold;
+  color: white;
+}
+.navbar-brand.title:hover {
+  text-decoration: none;
 }
 .navbar-item-div {
   padding: 0 10px;
   height: 100%;
+  font-size: 1.6rem;
   color: white;
   display: flex;
   align-items: center;
+  font-weight: 500;
+  
 }
+
 .navbar-item-div:hover {
   background-color: #51b7ff;
+  border-radius: 20px;
 }
 .navbar-register-button {
   margin: 10px;
@@ -54,6 +63,7 @@ body {
   color:black;
   font-size: 20px;
 }
+
 .login-form a,
 .register-form a{
   text-decoration: none;
@@ -180,6 +190,81 @@ body {
     font-size: 14px;
   }
 }
+
+
+
+
+.landing-page {
+  /* background-size: cover;
+  background-position: center; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* font-family: 'Arial', sans-serif; */
+  color: white;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  /* padding: 20px; */
+}
+
+.landing-page .title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+
+
+
+
+.btn.register {
+  background-color: #007bff;
+  color: white;
+}
+
+
+
+.btn.play {
+  background-color: #28a745;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -404,3 +489,4 @@ body {
   margin-bottom: 0;
   text-align: center;
 }
+
