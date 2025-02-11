@@ -15,7 +15,7 @@ let URL = '';
 // Check if the environment is development or production
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
     // Development environment (local testing)
-    URL = 'http://localhost:5000';
+    URL = 'https://chesschamp-backend.onrender.com';
     // Uncomment the line below if you want to run it locally in the future
     // URL = 'http://localhost:5000';
 } else {
