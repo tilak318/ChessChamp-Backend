@@ -45,8 +45,21 @@ body {
 .register-form {
   margin: 20px auto;
   padding: 10px;
+   background: rgba(214, 214, 214, 0.8);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  color:black;
+  font-size: 20px;
 }
-
+.login-form a,
+.register-form a{
+  text-decoration: none;
+  color: rgb(255, 0, 0);
+  font-weight: 500;
+}
 .LoginButton,
 .RegisterButton {
   margin-top: 10px;
