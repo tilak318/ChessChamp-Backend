@@ -17,7 +17,6 @@ import UserContext from './context/UserContext';
 import { URL } from './components/Utils/Config';
 import { Spinner } from 'react-bootstrap';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
 function App() {
