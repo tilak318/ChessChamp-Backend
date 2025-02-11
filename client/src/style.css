@@ -78,6 +78,32 @@ body {
   margin: 10px auto;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    padding: 1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .LoginButton {
+    flex-direction: column;
+  }
+
+  .LoginSpinner {
+    margin-top: 1rem;
+  }
+}
+
+
 /* Landing page styling */
 #landing-page-container {
   height: 100%;
