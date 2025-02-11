@@ -57,7 +57,7 @@ body {
 .login-form a,
 .register-form a{
   text-decoration: none;
-  color: rgb(255, 0, 0);
+  color: rgb(17, 0, 255);
   font-weight: 500;
 }
 .LoginButton,
