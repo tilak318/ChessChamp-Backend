@@ -19,6 +19,7 @@ import { Spinner } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
+import Footer from './components/Footer';
 
 function App() {
     const [user, setUser] = useState({
@@ -79,6 +80,9 @@ function App() {
                         <Route component={() => "404 Page not found"} path="*" />
                     </Switch>
                 </UserContext.Provider>
+                <Footer/>
+                
+                
             </BrowserRouter>
         </div>
     );
