@@ -26,10 +26,9 @@ body {
   font-size: 1.9rem;
   font-weight: bold;
   color: white;
+  margin-left: 100px;
 }
-.navbar-brand.title:hover {
-  text-decoration: none;
-}
+
 .navbar-item-div {
   padding: 0 10px;
   height: 100%;
@@ -40,6 +39,14 @@ body {
   font-weight: 500;
   
 }
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
 
 .navbar-item-div:hover {
   background-color: #51b7ff;
