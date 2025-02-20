@@ -545,9 +545,7 @@ a:hover {
 }
 
 /* Table Body */
-.leaderboard-body tr {
-  transition: background 0.3s;
-}
+
 
 .leaderboard-body tr:hover {
   background-color: rgba(255, 255, 255, 0.2);
