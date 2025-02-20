@@ -42,7 +42,7 @@ function Header() {
             </div>
             <div className='love'>
                 {User.user.isValid ? (
-                    <button onClick={handleLogout} className='btn btn-dark'>
+                    <button onClick={handleLogout} className='lbtn btn-dark'>
                         Logout
                     </button>
                 ) : (
