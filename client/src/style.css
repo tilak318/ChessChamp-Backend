@@ -579,3 +579,24 @@ a:hover {
   align-items: center;
   height: 100vh;
 }
+
+
+
+@media (max-width: 480px) {
+  #landing-page-title {
+    font-size:2rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .navbar-brand.title {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: white;
+    margin-left: 50px;
+}
+
+
+}
