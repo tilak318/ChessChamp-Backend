@@ -510,7 +510,7 @@ a:hover {
 
 /* General leaderboard page styling */
 .leaderboard-page {
-  background-image: url('../../assets/chess_bg_1.jpg');
+  /* background-image: url('../../assets/chess_bg_1.jpg'); */
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -545,7 +545,9 @@ a:hover {
 }
 
 /* Table Body */
-
+.leaderboard-body tr {
+  transition: background 0.3s;
+}
 
 .leaderboard-body tr:hover {
   background-color: rgba(255, 255, 255, 0.2);
@@ -570,4 +572,10 @@ a:hover {
   text-decoration: underline;
 }
 
-
+/* Spinner loading container */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
