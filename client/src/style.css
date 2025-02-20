@@ -587,15 +587,48 @@ a:hover {
     font-size:2rem;
   }
 
-  .btn {
+  .love .btn {
     padding: 8px 16px;
-    font-size: 14px;
+    font-size: 10px;
   }
   .navbar-brand.title {
-    font-size: 1.9rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: white;
     margin-left: 50px;
+}
+
+.navbar-item-div {
+  padding: 0 10px;
+  height: 100%;
+  font-size: 1.2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  
+}
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+
+.navbar-item-div:hover {
+  background-color: #51b7ff;
+  border-radius: 20px;
+}
+.navbar-register-button {
+  margin: 10px;
+}
+
+
+.love{
+  margin-left: 35px;
+  
 }
 
 
