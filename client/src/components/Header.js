@@ -40,7 +40,7 @@ function Header() {
                     <div className='navbar-item-div'>Leaderboard</div>
                 </Link>
             </div>
-            <div>
+            <div className='love'>
                 {User.user.isValid ? (
                     <button onClick={handleLogout} className='btn btn-dark'>
                         Logout

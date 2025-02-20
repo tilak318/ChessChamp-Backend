@@ -56,6 +56,11 @@ a:hover {
   margin: 10px;
 }
 
+
+.love{
+  margin-left: 100px;
+}
+
 /* Login and register form styling */
 .login-form,
 .register-form {
