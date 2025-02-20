@@ -20,29 +20,29 @@ function LeaderBoard() {
 
     if (isLoading) {
         return (
-            <div className='Spinner'>
+            <div className='spinner-container'>
                 <Spinner animation='border' variant='primary' />
             </div>
         );
     }
 
     return (
-        <div style={{backgroundImage: `url(${ChessBG})`, height: '100%'}}>
-            <div id='leaderboard-container'>
-                <Table striped bordered hover variant="dark">
-                    <thead>
+        <div className="leaderboard-page">
+            <div className="leaderboard-container">
+                <Table striped bordered hover variant="dark" className="leaderboard-table">
+                    <thead className="leaderboard-header">
                         <tr>
                             <th>Rank</th>
                             <th>Username</th>
                             <th>Rating</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="leaderboard-body">
                         {users.map((user, index) => {
                             return (
                                 <tr key={index}>
                                     <td>{index + 1}</td>
-                                    <td><Link to={`/u/${user._id}`}  style={{color: 'white', fontWeight: 'bold'}} >{user.username}</Link></td>
+                                    <td><Link to={`/u/${user._id}`} className="leaderboard-username">{user.username}</Link></td>
                                     <td>{user.rating}</td>
                                 </tr>
                             );
