@@ -11,8 +11,8 @@ const server = http.createServer(app);
 
 const io = socketio(server, {
     cors: {
-        // origin: 'https://chesschamp.onrender.com',
-        origin: 'http://localhost:3000',
+        origin: 'https://chesschamp.onrender.com',
+        
         credentials: true,
     },
 });
@@ -36,8 +36,8 @@ io.on('connection', (socket) => {
 
 app.use(express.json());
 app.use(cors({
-    // origin: 'https://chesschamp.onrender.com',
-    origin: 'http://localhost:3000',
+    origin: 'https://chesschamp.onrender.com',
+   
     credentials: true,
 }));
 
