@@ -20,7 +20,7 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
     // URL = 'http://localhost:5000';
 } else {
     // Production environment (deployed app)
-    URL = 'http://localhost:5000';  // ✅ Added this for production
+    URL = 'https://chesschamp-backend.onrender.com';  // ✅ Added this for production
 }
 
 export { URL };
