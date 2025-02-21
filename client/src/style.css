@@ -570,9 +570,5 @@ a:hover {
   margin-bottom: 10px;
   letter-spacing: 3px;
 }
-/* home page height */
-#home-page-container {
-  display: flex;
-  height:80%;
-}
+
 }
