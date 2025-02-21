@@ -290,7 +290,7 @@ a:hover {
 #home-left-side {
   width: 50%;
   display: flex;
-  flex-direction: column;
+ 
 }
 #home-left-button {
   align-self: center;
