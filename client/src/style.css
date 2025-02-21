@@ -284,6 +284,7 @@ a:hover {
 /* Home page styling */
 #home-page-container {
   display: flex;
+  height: 80%;
   
 }
 
