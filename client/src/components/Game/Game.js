@@ -398,7 +398,7 @@ function Game(props) {
                     </div>
                     <div id="chessboard">
                         <Chessboard
-                            width={'400'}
+                            width={'550'}
                             position={fen}
                             onDrop={(move) => {
                                 handleMove({
