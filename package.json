@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "cors": "^2.8.5"
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
-  }
-}
