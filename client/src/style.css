@@ -581,11 +581,3 @@ a:hover {
 }
 }
 
-#chessboard div{
-  height: 500px;
-  width: 500px;
-}
-#chessboard svg{
-  height: 50px;
-  width: 50px;
-}
