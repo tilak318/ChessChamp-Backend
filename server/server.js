@@ -36,7 +36,8 @@ io.on('connection', (socket) => {
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://chesschamp.onrender.com',
+    // origin: 'https://chesschamp.onrender.com',
+    origin: 'https://lokichess.onrender.com',
    
     credentials: true,
 }));
