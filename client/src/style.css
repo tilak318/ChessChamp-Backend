@@ -676,23 +676,22 @@ a:hover {
   margin-top: 10px;
   font-size: 0.9rem;
 }
-
+.developed{
+  font-size: large;
+}
 .developer-credit {
-  font-size: 1.4rem;
-  margin-top: 10px;
+  font-size: 2rem; /* Increased font size */
+  margin-top: 15px;
+  padding: 10px 0;
 }
 .developer-name {
   color: #ffcc00;
-  font-weight: bold;
-  text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .developer-name:hover {
-  color: #ffdd44;
-  text-decoration: underline;
-  text-shadow: 0 0 8px rgba(255, 221, 68, 0.8);
+color: #662424;
 }
 
 
