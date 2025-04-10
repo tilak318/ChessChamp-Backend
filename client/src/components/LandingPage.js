@@ -44,7 +44,11 @@ function LandingPage() {
     return User.user.isValid ? (
         <Home />
     ) : (
-        <div className="landing-page" style={{ backgroundImage: `url(${ChessBG})` }}>
+        <div className="landing-page" style={{ 
+            backgroundImage: `url(${ChessBG})`,
+            minHeight: '100vh',
+            height: 'auto'
+        }}>
             <div className="overlay">
                 <div className="content">
                     <h1 className="title">{message}<span className={cursor}>|</span></h1>

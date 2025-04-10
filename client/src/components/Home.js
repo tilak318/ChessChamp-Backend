@@ -22,7 +22,7 @@ function Home() {
     }
 
     return (
-        <div id="home-page-container" style={{backgroundImage: `url(${ChessBG})`}}>
+        <div id="home-page-container" style={{ backgroundImage: `url(${ChessBG})` }}>
             <div id="home-left-side">
                 <div id="home-left-button">
                     <button type="submit" onClick={handleFriendsGame} className="btn btn-primary btn-lg play-game-button">Play with friends</button>
