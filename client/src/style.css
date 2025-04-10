@@ -677,6 +677,26 @@ a:hover {
   font-size: 0.9rem;
 }
 
+.developer-credit {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+.developer-name {
+  color: #ffcc00;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.developer-name:hover {
+  color: #ffdd44;
+  text-decoration: underline;
+  text-shadow: 0 0 8px rgba(255, 221, 68, 0.8);
+}
+
+
+
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;

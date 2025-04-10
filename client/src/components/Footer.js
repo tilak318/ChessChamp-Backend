@@ -30,7 +30,8 @@ function Footer() {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; {currentYear} LOKI Chess. All rights reserved. Developed by xDev Solutions.</p>
+                <p>&copy; {currentYear} LOKI Chess. All rights reserved.</p>
+                <p>Developed by <a href="https://xdev.onrender.com/" target="_blank" rel="noopener noreferrer" className="developer-name">xDev Solutions</a></p>
             </div>
         </footer>
     );
